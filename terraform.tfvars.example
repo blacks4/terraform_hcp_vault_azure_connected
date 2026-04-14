@@ -1,0 +1,37 @@
+hcp_client_id     = "replace-me"
+hcp_client_secret = "replace-me"
+hcp_project_id    = "replace-me"
+hcp_region        = "eastus"
+
+azure_subscription_id = "replace-me"
+azure_tenant_id       = "replace-me"
+azure_client_id       = "replace-me"
+azure_client_secret   = "replace-me"
+
+environment = "dev"
+name_prefix = "hcp-vault"
+
+azure_location            = "East US"
+azure_resource_group_name = "rg-hcp-vault"
+azure_vnet_name           = "vnet-hcp-vault"
+azure_vnet_cidr           = "10.60.0.0/16"
+azure_subnet_name         = "snet-compute"
+azure_subnet_cidr         = "10.60.1.0/24"
+
+create_vm_public_ip           = true
+ssh_allowed_cidrs             = ["203.0.113.10/32"]
+azure_vm_name                 = "vm-hcp-vault-client"
+azure_vm_size                 = "Standard_B2s"
+azure_vm_admin_username       = "azureuser"
+azure_vm_private_key_filename = "azure-vm-key.pem"
+
+hvn_id           = "azure-hvn"
+hvn_cidr_block   = "172.25.48.0/20"
+hvn_peering_id   = "azure-peering"
+hvn_route_id     = "azure-vnet-route"
+vault_cluster_id = "vault-standard-small"
+
+tags = {
+  owner = "replace-me"
+  date  = "MM-DD-YYYY"
+}
